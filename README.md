@@ -14,6 +14,7 @@
 
 ## 🧩 项目结构
 
+```plaintext
 A-la-recherche-du-temps-perdu/
 ├── index.html # 页面结构（内嵌了 HTML、CSS、JS）
 ├── css/
@@ -21,3 +22,4 @@ A-la-recherche-du-temps-perdu/
 ├── js/
 │ └── myscript.js # 交互逻辑（逐字动画、场景切换、语录轮播）
 └── README.md # 项目说明
+```
