@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello U</title>
+    <link rel="stylesheet" href="./css/mystyle.css">
+    <script src="./js/myscript.js"></script>
+</head>
+<body>
+    <div class="dynamic-bg" id="dynamicBg"></div>
+    <div class="stage" id="stageContainer">
+        <div id="initialPanel" class="intro-card">
+            <div class="arrow-btn" id="startArrow">🖐</div>
+            <span id="initialCursorSpan" class="prompt-text"></span>
+            <div id="prompt" style="font-size: 1.25rem; margin-top: 12px; color: rgb(255, 255, 150);">High Five!</div>
+        </div>
+
+        <div id="codePanel" class="code-card hidden">
+            <div class="code-header" style="display: flex;justify-content:left;align-items: center;">
+                <div class="window-dot"></div>
+                <div class="window-dot"></div>
+                <div class="window-dot"></div>
+                <span style="margin-left: 12px; font-size: 0.8rem; color:#aaa;">Hello U.html</span>
+            </div>
+            <div class="code-content">
+                <div class="line-numbers" id="lineNumbers"></div>
+                <div class="code-text" id="codeTextContainer"></div>
+            </div>
+            <div id="enterHintArea" style="text-align: center; padding: 8px 0 12px 0; background: #1e1e2f; border-top: 1px solid #2a2a3c;"></div>
+        </div>
+
+        <div id="finalPanel" class="quote-container hidden">
+            <div class="quote-text" id="dynamicQuote"></div>
+            <div class="switch-group">
+                <button class="btn-switch btn-secondary" id="prevQuoteBtn">← Previous Heartbeat</button>
+                <button class="btn-switch btn-primary" id="nextQuoteBtn">→ Next Romance</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const quotesList = [
+        "The screen prints 'Hello U'\n instead of 'Hello World'\n because U are my World",
+        "You are the CSS\n to my HTML",
+        "49 20 4C 4F 56 45 20 55",
+        "520 0X522",
+        ];
+        const quoteElement = document.getElementById('dynamicQuote');
+        quoteElement.style.whiteSpace = 'pre-line';
+        quoteElement.textContent = quotesList[currentIndex];
+        const prevBtn = document.getElementById('prevQuoteBtn');
+        const nextBtn = document.getElementById('nextQuoteBtn');
+    </script>
+</body>
+</html>
